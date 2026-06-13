@@ -8,11 +8,11 @@
 
 ## Key Findings (Preliminary)
 
--   Clear Old World/New World phylogenetic split at whole-genome and locus-specific scales.
--   13 distinct populations identified within *L. infantum* via ADMIXTURE (K=13).
--   MSL deletions predominantly in Brazilian populations; absent or rare in Old World samples.
--   Ploidy variation (diploid vs tetraploid) correlates with geography and MSL status.
--   MSL locus shows divergent phylogenetic topology vs. genome-wide baseline, suggesting localised evolutionary processes.
+- Clear Old World/New World phylogenetic split at whole-genome and locus-specific scales.
+- 13 distinct populations identified within *L. infantum* via ADMIXTURE (K=13).
+- MSL deletions predominantly in Brazilian populations; absent or rare in Old World samples.
+- Ploidy variation (diploid vs tetraploid) correlates with geography and MSL status.
+- MSL locus shows divergent phylogenetic topology vs. genome-wide baseline, suggesting localised evolutionary processes.
 
 ------------------------------------------------------------------------
 
@@ -22,9 +22,9 @@
 
 ADMIXTURE analysis identified cryptic population structure across three complementary datasets:
 
--   **All samples + outgroup (K=12):** Species-level structure separating *L. infantum* from an *L. donovani* outgroup.
--   **L. infantum only (K=13):** Fine-scale cryptic populations within *L. infantum*.
--   **Americas only (K=13):** High-resolution New World structure where MSL deletions predominate.
+- **All samples + outgroup (K=12):** Species-level structure separating *L. infantum* from an *L. donovani* outgroup.
+- **L. infantum only (K=13):** Fine-scale cryptic populations within *L. infantum*.
+- **Americas only (K=13):** High-resolution New World structure where MSL deletions predominate.
 
 Cross-validation error minimisation determined optimal K for each dataset. All three datasets are represented in the repository; focus figures below use K=13 *L. infantum* only as it directly addresses MSL variation within the species of interest.
 
@@ -38,10 +38,10 @@ Cross-validation error minimisation determined optimal K for each dataset. All t
 
 Neighbour-Joining phylogenies were computed at four genomic scales to detect selection signatures on the MSL region at varying levels:
 
--   **Whole-genome:** Neutral evolutionary baseline across all chromosomes (diploid, multiple datasets).
--   **Chromosome 31 (MSL locus):** Locus-specific evolution under potential selection (tetraploid).
--   **100kb windows around MSL:** Regional selection signal (tetraploid, chr31 centred).
--   **20kb windows around MSL:** Fine-scale locus-specific evolution (tetraploid, centred on the MSL genes).
+- **Whole-genome:** Neutral evolutionary baseline across all chromosomes (diploid, multiple datasets).
+- **Chromosome 31 (MSL locus):** Locus-specific evolution under potential selection (tetraploid).
+- **100kb windows around MSL:** Regional selection signal (tetraploid, chr31 centred).
+- **20kb windows around MSL:** Fine-scale locus-specific evolution (tetraploid, centred on the MSL genes).
 
 Trees were stratified by ploidy level (diploid vs tetraploid) and annotated with geographic region, host species, MSL copy number, and population ancestry.
 
@@ -104,8 +104,8 @@ Spatial analysis of MSL copy number variation and sample distribution across glo
 
 MSL deletions confer resistance to **miltefosine**, the only oral treatment for leishmaniasis. Understanding whether resistant strains spread via:
 
--   **Selection:** Faster than expected, requires urgent treatment policy intervention.
--   **Drift:** Random spread driven by demographic history and founder effects.
+- **Selection:** Faster than expected, requires urgent treatment policy intervention.
+- **Drift:** Random spread driven by demographic history and founder effects.
 
 ...has direct implications for treatment policy, surveillance strategies, and prediction of resistance spread in new geographic regions.
 
@@ -115,49 +115,49 @@ MSL deletions confer resistance to **miltefosine**, the only oral treatment for 
 
 **Population Structure (ADMIXTURE):**
 
-\- ADMIXTURE v1.3 with K=1-20 tested on pruned SNP matrices.
+- ADMIXTURE v1.3 with K=1-20 tested on pruned SNP matrices.
 
-\- Cross-validation error minimisation for optimal K selection.
+- Cross-validation error minimisation for optimal K selection.
 
-\- High-confidence assignments: ≥90% ancestry threshold for population membership.
+- High-confidence assignments: ≥90% ancestry threshold for population membership.
 
 **Phylogenetics:**
 
-\- Nei genetic distances computed from biallelic SNP genotypes (ape package, R).
+- Nei genetic distances computed from biallelic SNP genotypes (ape package, R).
 
-\- Neighbour-Joining trees constructed with `ape::nj()` and rooted where applicable.
+- Neighbour-Joining trees constructed with `ape::nj()` and rooted where applicable.
 
-\- Visualisation with `ggtree` (R) including multiple annotation layers: MSL status, population, geographic region, host species, ploidy.
+- Visualisation with `ggtree` (R) including multiple annotation layers: MSL status, population, geographic region, host species, ploidy.
 
-\- Distance matrices and Newick-format tree files retained for reproducibility.
+- Distance matrices and Newick-format tree files retained for reproducibility.
 
 **Population Genetics:**
 
-\- π: windowed nucleotide diversity per population (50kb windows, 5kb step) via VCFtools.
+- π: windowed nucleotide diversity per population (50kb windows, 5kb step) via VCFtools.
 
-\- Tajima's D: standardised measure of nucleotide diversity, computed in 50kb windows with 5kb step.
+- Tajima's D: standardised measure of nucleotide diversity, computed in 50kb windows with 5kb step.
 
-\- Fst: pairwise population differentiation (stampp package, R) and sliding-window Fst on chr31 via VCFtools.
+- Fst: pairwise population differentiation (stampp package, R) and sliding-window Fst on chr31 via VCFtools.
 
-\- Dxy: nucleotide divergence between MSL0 and MSL4 populations (pegas package, R) and unified framework (custom R scripts).
+- Dxy: nucleotide divergence between MSL0 and MSL4 populations (pegas package, R) and unified framework (custom R scripts).
 
 **Hardy-Weinberg Equilibrium:**
 
-\- Comprehensive HWE: Chi-square test on diploidised genotypes for each population.
+- Comprehensive HWE: Chi-square test on diploidised genotypes for each population.
 
-\- Windowed HWE: Chi-square test on 50kb windows of chromosome 31 with 5kb step.
+- Windowed HWE: Chi-square test on 50kb windows of chromosome 31 with 5kb step.
 
-\- Threshold for ≥90% population membership; separate ploidy models for SNP and tetraploid data.
+- Threshold for ≥90% population membership; separate ploidy models for SNP and tetraploid data.
 
 **Data:**
 
-\- 463 *L. infantum* isolates, global sampling.
+- 463 *L. infantum* isolates, global sampling.
 
-\- Whole-genome sequencing (VCF format, biallelic SNPs).
+- Whole-genome sequencing (VCF format, biallelic SNPs).
 
-\- Geographic metadata, host species, MSL copy number (coverage-based).
+- Geographic metadata, host species, MSL copy number (coverage-based).
 
-\- Ploidy stratification: diploid (whole-genome) and tetraploid (chr31) calls.
+- Ploidy stratification: diploid (whole-genome) and tetraploid (chr31) calls.
 
 ------------------------------------------------------------------------
 
@@ -217,27 +217,29 @@ MSL deletions confer resistance to **miltefosine**, the only oral treatment for 
 
 **R (v4.4.2) & Packages:**
 
-\- Data manipulation: tidyverse (Wickham et al. 2019), data.table (Dowle & Srinivasan 2021)
+- Data manipulation: tidyverse (Wickham et al. 2019), data.table (Dowle & Srinivasan 2021)
 
-\- Phylogenetics: ape (Paradis & Schliep 2019), ggtree (Yu et al. 2017), treeio (Wang et al. 2020), phytools (Revell 2012)
+- Phylogenetics: ape (Paradis & Schliep 2019), ggtree (Yu et al. 2017), treeio (Wang et al. 2020), phytools (Revell 2012)
 
-\- Population genetics: pegas (Paradis 2010), stampp (Pembleton et al. 2013), adegenet (Jombart 2008)
+- Population genetics: pegas (Paradis 2010), stampp (Pembleton et al. 2013), adegenet (Jombart 2008)
 
-\- Visualisation: ggplot2 (Wickham 2016), RColorBrewer (Neuwirth 2022), ggtext (Wilke & Wiernik 2022)
+- Visualisation: ggplot2 (Wickham 2016), RColorBrewer (Neuwirth 2022), ggtext (Wilke & Wiernik 2022)
 
 **External Tools:**
 
-\- ADMIXTURE v1.3 (Alexander et al. 2009) — Bayesian population structure inference
+- ADMIXTURE v1.3 (Alexander et al. 2009) — Bayesian population structure inference
 
-\- VCFtools (Danecek et al. 2011) — VCF processing, filtering, population genetics statistics
+- VCFtools (Danecek et al. 2011) — VCF processing, filtering, population genetics statistics
 
-\- SplitsTree (Huson & Bryant 2006) — NeighborNet and phylogenetic network visualisation
+- SplitsTree (Huson & Bryant 2006) — NeighborNet and phylogenetic network visualisation
 
 **Custom Utilities:**
 
-\- `vcf2phylip` — VCF to PHYLIP/NEXUS format conversion
+- `vcf2phylip` — VCF to PHYLIP/NEXUS format conversion
 
-\- `diploidise_tetraploid_vcf_v2.pl` — Conversion of tetraploid to pseudodiploid genotypes for SNP-based analyses
+- `diploidise_tetraploid_vcf_v2.pl` — Conversion of tetraploid to pseudodiploid genotypes for SNP-based analyses
+
+- A complete list of R package dependencies is available in `requirements.R`.
 
 ------------------------------------------------------------------------
 
@@ -253,29 +255,29 @@ MSL copy number inferred from read depth mapping to reference genome.
 
 **Completed:**
 
-\- ✅ ADMIXTURE population structure (three complementary datasets: species-level, species-only, Americas-only)
+- ✅ ADMIXTURE population structure (three complementary datasets: species-level, species-only, Americas-only)
 
-\- ✅ Multi-scale phylogenetic analysis (Neighbour-Joining trees at whole-genome, chr31, 100kb, 20kb scales)
+- ✅ Multi-scale phylogenetic analysis (Neighbour-Joining trees at whole-genome, chr31, 100kb, 20kb scales)
 
-\- ✅ Ploidy stratification (diploid and tetraploid analyses)
+- ✅ Ploidy stratification (diploid and tetraploid analyses)
 
-\- ✅ Hardy-Weinberg equilibrium testing (comprehensive + windowed on chr31)
+- ✅ Hardy-Weinberg equilibrium testing (comprehensive + windowed on chr31)
 
-\- ✅ Population diversity statistics (π, Tajima's D, Fst, Dxy)
+- ✅ Population diversity statistics (π, Tajima's D, Fst, Dxy)
 
-\- ✅ Geographic distribution and MSL coverage analysis
+- ✅ Geographic distribution and MSL coverage analysis
 
-\- ✅ MSL copy number verification in non-Americas strains
+- ✅ MSL copy number verification in non-Americas strains
 
 **Pending Final Validation:**
 
-\- ⏳ Unified population statistics framework (awaiting final VCF QC from supervisor)
+- ⏳ Unified population statistics framework (awaiting final VCF QC from supervisor)
 
 **Broader Context:**
 
-\- 🔄 Manuscript preparation (this is in active development, being prepared by myself, with assistance from Dr Daniel Jeffares
+- 🔄 Manuscript preparation (this is in active development, being prepared by myself, with assistance from Dr Daniel Jeffares
 
-\- 🔄 Integration of HWE and geographic collaborator results (Zeynep Sakaoglu)
+- 🔄 Integration of HWE and geographic collaborator results (Zeynep Sakaoglu)
 
 ------------------------------------------------------------------------
 
@@ -290,8 +292,9 @@ GitHub: [\@MathewJohansson](https://github.com/MathewJohansson)
 
 ## Acknowledgements
 
--   Dr. Daniel Jeffares (University of York) — supervision, genomic data generation, ongoing feedback
--   Zeynep Sakaoglu — Hardy-Weinberg equilibrium and geographic distribution analyses collaboration
+- [Dr. Daniel Jeffares](https://www.york.ac.uk/biology/research/molecular-microbiology/daniel-jeffares/) (University of York) — supervision, ongoing feedback
+- [Zeynep Sakaoglu](https://tr.linkedin.com/in/zeynepsakaoglu) — Hardy-Weinberg equilibrium and geographic distribution analyses collaboration
+- [Dr. Eliza Cupolillo](https://scholar.google.com/citations?user=S5jebv6GW0IC&hl=pt-BR) - genomic data generation
 
 ------------------------------------------------------------------------
 
