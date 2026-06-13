@@ -2,7 +2,11 @@
 
 ## Overview
 
-*Leishmania infantum* causes visceral leishmaniasis, affecting thousands globally. This project investigates the evolutionary dynamics of miltefosine resistance through population genomic analysis of the Miltefosine Sensitivity Locus (MSL) on chromosome 31.
+*Leishmania infantum* causes visceral leishmaniasis (kala-azar), a severe and often fatal parasitic disease affecting \~300,000 people globally per year. For decades, miltefosine has been the only oral treatment available, however, miltefosine-resistant strains of *L. infantum* have emerged in South America, threatening treatment efficacy in endemic regions.
+
+**The Problem:** Resistance to miltefosine is associated with deletions of the Miltefosine Sensitivity Locus (MSL), a 4-gene region on chromosome 31. If this resistance is spreading due to positive selection, intervention is urgent. If it spreads through neutral demographic processes (founder effects, genetic drift), the trajectory is more predictable but still concerning.
+
+**This Project:** We investigate the evolutionary dynamics of MSL deletions across global *L. infantum* populations using population genomic analysis. By comparing phylogenetic and population genetic patterns at the MSL locus versus genome-wide baselines, we distinguish selection from drift with direct implications for predicting resistance spread and informing treatment policy.
 
 **Central Research Question:** Is the spread of MSL deletions (conferring drug resistance) driven by positive selection or neutral demographic processes (e.g., drift)?
 
@@ -327,18 +331,13 @@ Pembleton, L.W., Cogan, N.O.I. & Forster, J.W. (2013). StAMPP: an R package for 
 
 Revell, L.J. (2012). phytools: an R package for phylogenetic comparative biology (and other things). Methods in Ecology and Evolution, 3(2), 217–223.
 
-Saitou, N. & Nei, M. (1987). The Neighbour-joining method: a new
-method for reconstructing phylogenetic trees. Molecular Biology and
-Evolution, 4(4), 406–425.
+Saitou, N. & Nei, M. (1987). The Neighbour-joining method: a new method for reconstructing phylogenetic trees. Molecular Biology and Evolution, 4(4), 406–425.
 
 Wang, L.G., Lam, T.T.Y., Xu, S., Dai, Z., Zhou, L., Feng, T., et al. (2020). treeio: an R package for phylogenetic tree input and output with richly annotated and associated data. Molecular Biology and Evolution, 37(2), 599–603.
 
 Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis (2nd ed.). Springer.
 
-Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L.D., François,
-R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen,
-T.L., Miller, E., Bache, S.M., Müller, K., Ooms, J., Robinson, D., Seidel,
-D., Spinu, V., Takahashi, K., Vaughan, D., Wilke, C., Woo, K. and Yutani, H. (2019). Welcome to the Tidyverse. *Journal of Open Source Software*, [online] 4(43), p.1686. doi:<https://doi.org/10.21105/joss.01686.>
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L.D., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T.L., Miller, E., Bache, S.M., Müller, K., Ooms, J., Robinson, D., Seidel, D., Spinu, V., Takahashi, K., Vaughan, D., Wilke, C., Woo, K. and Yutani, H. (2019). Welcome to the Tidyverse. *Journal of Open Source Software*, [online] 4(43), p.1686. doi:<https://doi.org/10.21105/joss.01686.>
 
 Wilke, C.O. & Wiernik, B.M. (2022). ggtext: Improved Text Rendering Support for "ggplot2". R package version 0.1.1.
 
