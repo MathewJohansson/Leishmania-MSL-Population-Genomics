@@ -1,0 +1,1 @@
+/mnt/scratch/projects/biol-leish-2019/SOFTWARE/vcf2phylip/vcf2phylip.py

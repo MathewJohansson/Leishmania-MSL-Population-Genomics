@@ -1,0 +1,131 @@
+================================================================================
+SCRIPT INVENTORY — L. infantum MSL Deletion Manuscript
+2026-06-07
+================================================================================
+
+VCFs:
+  [DIPLOID]    whole-genome, no chr31, no outgroup (Viking: vcf_files/)
+  [PSEUDODIP]  chr31, diploidised tetraploid, 930 pseudo-haplotypes (local: Data/)
+  [TETRAPLOID] chr31, raw tetraploid calls (local: Data/)
+               NOTE: under revision — Dan flagged 0/0/0/0 over-filtering (2026-06-07)
+
+Population membership: Data/population_structure/ master TSVs (LO K=12, LI K=13, AM K=13)
+Membership threshold: ≥90% all analyses; ≥50% HWE only
+
+Status codes: ACTIVE | SUPERSEDED | NEEDS RERUN | NEEDS REWRITE
+
+================================================================================
+
+ADMIXTURE/population_structure.R
+  ADMIXTURE bar charts and geographic maps (LO/LI/AM subsets). Paul Tol palette
+  colour fix applied. Output: N2, N3 figures. ACTIVE
+
+Coverage/gene_coverage_batch_analyis_and_MSL-2026-04-27.R
+  Batch gene coverage + MSL copy-number quantification. Produces MSL_coverage_rounded
+  values used throughout. ACTIVE
+
+Coverage/MSL_coverage_normalisation.R
+  Normalises raw MSL coverage to copy-number estimates. ACTIVE
+
+Coverage/MSL_verification_non_Americas.R
+  Verifies non-Americas MSL calls; confirms MSL2/MSL3 outside Americas are not
+  genuine deletions. ACTIVE
+
+Coverage/Turkish_Strain_Coverage_Verification.R
+  Targeted coverage verification for Turkish strains. ACTIVE
+
+Geographic Maps/Pie chart FINAL.R
+  Geographic pie chart maps of MSL coverage by country (world) and state (Brazil). ACTIVE
+
+Geographic Maps/Bar plot final code.R
+  Geographic bar chart map overlays. ACTIVE
+
+HWE/HWE_FINAL.R
+  Hardy-Weinberg tests across all populations. ≥50% threshold. [DIPLOID]. ACTIVE (Zeynep)
+
+HWE/HWE_windowed_chr31.R
+  Sliding window HWE across chr31. [PSEUDODIP]. ACTIVE
+
+Phylogenetic Scripts/NJ Trees/
+  Nei genetic distance NJ trees at multiple resolutions and subsets:
+    - tetraploid_nei_genetic_distance_Chr31_*.R         chr31 [TETRAPLOID]
+    - tetraploid_nei_genetic_distance_100kb_windows_*.R 100kb windows [TETRAPLOID]
+    - tetraploid_nei_genetic_distance_20kb_windows_*.R  20kb windows [TETRAPLOID]
+    - diploid_nei_genetic_distance_whole_genome_*.R     whole-genome [DIPLOID]
+      (+ _VIKING variants for HPC; SLURM wrappers: run_whole_genome_nj_*.sh)
+    - run_splitstree_all.sh                             NeighbourNet from NJ output
+  All ACTIVE
+
+Phylogenetic Scripts/*/Phylogenetics.R (+ PopAnnotated variants)
+  Tree plotting scripts for whole-genome, 100kb, and 20kb windows.
+  PopAnnotated variants colour tips by ADMIXTURE population. All ACTIVE
+
+Population Diversity and Differentiation/load_and_transform_vcf.V2.R
+  Utility — loads VCF and returns dosage matrix. Sourced by other scripts. ACTIVE
+
+Population Diversity and Differentiation/overlap_pops_and_MSL_names.R
+  Early utility that intersected MSL status lists with ADMIXTURE population files.
+  SUPERSEDED — master membership TSVs now used throughout.
+
+Population Diversity and Differentiation/population_statistics_and_fst2.R
+  Command-line VCFtools subprocess wrapper. Takes a run-table of population pairs;
+  calls VCFtools externally for windowed π, Tajima's D, Fst; returns mean values
+  per pair. SUPERSEDED for main analysis by unified scripts; retained as general tool.
+
+Population Diversity and Differentiation/Pop_Diversity_and_Differentiation_Visualisation.R
+  Earlier chr31 visualisation for Pop2/Pop5 only (old population numbering).
+  SUPERSEDED by Unified_Population_Statistics_Visualisation.R
+
+Population Diversity and Differentiation/PCA/
+  diploid_PCA.R, diploid_PCA2.R — PCA from [DIPLOID]. ACTIVE
+  tetraploid_PCA.R — PCA from [TETRAPLOID]. ACTIVE
+
+Population Diversity and Differentiation/Fst/stampp_fst_*.R
+  StaMPP Fst for AM, LI, and LO subsets. [DIPLOID]. Output includes N4 figures
+  (N4.3 key figure). Scripts ready; not yet rerun on Viking. ACTIVE
+
+Population Diversity and Differentiation/Fst/sliding_window_fst_chr31.R
+  Visualises MSL0 vs MSL4 Fst within AM2 and AM5 across chr31. Aggregates
+  pre-computed 1kb VCFtools windows into 50kb bins. Distinct from unified scripts
+  (within-population MSL-type comparison, not between-population). Neutral Fst
+  baseline pending Viking data. ACTIVE
+
+Population Diversity and Differentiation/Pegas_Dxy/pegas_dxy_windowed_chr31.R
+  Earlier windowed Dxy for chr31. SUPERSEDED by Unified_Population_Statistics_Chr31.R
+
+Population Diversity and Differentiation/Tajima's D/Chr31_TajD_*.R
+  Three scripts: genome plot, per-population plot, summary table. All read
+  VCFtools Tajima's D outputs from Per_population/. All ACTIVE
+
+Population Diversity and Differentiation/Unified Population Statistics/
+  Unified_Population_Statistics_Chr31.R
+    π + Tajima's D from [PSEUDODIP] (PLOIDY=2); Dxy + Fst from [TETRAPLOID]
+    (PLOIDY=4). 50kb windows, 5kb step. 13 AM groups; 45 MSL0-MSL0 pairs,
+    3 MSL4-MSL4 pairs. MSL locus removed before analysis.
+    NEEDS REWRITE — wrong VCF used for π/Tajima's D; between-pop results
+    also pending tetraploid VCF update from Dan.
+
+  Unified_Population_Statistics_NonChr31.R
+    All four stats from [DIPLOID] (PLOIDY=2), per chromosome, all AM groups.
+    50kb windows, 5kb step. NEEDS RERUN — π scale fix applied but not yet run.
+
+  Run_Unified_NonChr31.R
+    SLURM wrapper for NonChr31 script on Viking. ACTIVE
+
+  Unified_Population_Statistics_Visualisation.R
+    Boxplots and windowed line plots for all four stats. Reads unified TSVs.
+    ACTIVE — pending updated TSV inputs.
+
+  Verify Pop Stats.R
+    Verifies R formula outputs (π, Tajima's D, Fst) against VCFtools reference
+    files from Dan (2026-06-04). 50kb non-overlapping windows. AM2 (n=65) and
+    AM9 (n=20), LinJ.36 and LinJ.31. Run 2026-06-07. ACTIVE
+
+diploidise_tetraploid_vcf_v2.pl (root)
+  Converts [TETRAPLOID] to [PSEUDODIP] by splitting each sample into SRR...1
+  and SRR...2 pseudo-haplotypes. v2 is current; v1 retained for reference. ACTIVE
+
+Archive/
+  Superseded early development scripts. Retained for reference only.
+
+================================================================================

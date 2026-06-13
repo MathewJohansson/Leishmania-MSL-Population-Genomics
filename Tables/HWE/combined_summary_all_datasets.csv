@@ -1,0 +1,47 @@
+"Dataset","Population","N","p_normal","q_deletion","Chi_square","df","P_value","Significant","Test_reliable","Test_performed","Test_type","Testable_classes"
+"AllSamples_k12","LO1",10,1,0,NA,NA,NA,NA,FALSE,FALSE,"No test - monomorphic",1
+"AllSamples_k12","LO2",27,0.1111,0.8889,8.0527,1,0.00454365382128365,TRUE,TRUE,TRUE,"Chi-square test",3
+"AllSamples_k12","LO3",13,0.9423,0.0577,0.1017,1,0.74982244157586,FALSE,FALSE,TRUE,"Chi-square test",2
+"AllSamples_k12","LO4",21,0.9167,0.0833,4.2561,1,0.0391099279130155,TRUE,FALSE,TRUE,"Chi-square test",2
+"AllSamples_k12","LO5",9,0.9167,0.0833,0.2254,1,0.634980376249006,FALSE,FALSE,TRUE,"Chi-square test (small sample - interpret cautiously)",2
+"AllSamples_k12","LO6",79,0.4968,0.5032,280.4491,3,1.69299306442693e-60,TRUE,TRUE,TRUE,"Chi-square test",5
+"AllSamples_k12","LO7",107,0.5374,0.4626,531.6527,3,6.58643364804333e-115,TRUE,TRUE,TRUE,"Chi-square test",5
+"AllSamples_k12","LO8",20,0.925,0.075,0.3579,1,0.549702513164256,FALSE,FALSE,TRUE,"Chi-square test",2
+"AllSamples_k12","LO9",18,0.9583,0.0417,0.0512,1,0.821053192601104,FALSE,FALSE,TRUE,"Chi-square test",2
+"AllSamples_k12","LO10",76,0.0263,0.9737,7.7069,1,0.0055011381514313,TRUE,FALSE,TRUE,"Chi-square test",2
+"AllSamples_k12","LO11",65,0.0231,0.9769,5.8374,1,0.0156885614176956,TRUE,FALSE,TRUE,"Chi-square test",2
+"AllSamples_k12","LO12",2,1,0,NA,NA,NA,NA,FALSE,FALSE,"No test - monomorphic",1
+"Americas_k13","AM1",24,0.0417,0.9583,3.896,1,0.0484013026435346,TRUE,FALSE,TRUE,"Chi-square test",2
+"Americas_k13","AM2",63,0.5198,0.4802,225.3549,3,1.3967011037201e-48,TRUE,TRUE,TRUE,"Chi-square test",5
+"Americas_k13","AM3",20,0.1125,0.8875,10.051,1,0.00152267844878954,TRUE,TRUE,TRUE,"Chi-square test",3
+"Americas_k13","AM4",17,0.9559,0.0441,0.0577,1,0.810217444471485,FALSE,FALSE,TRUE,"Chi-square test",2
+"Americas_k13","AM5",16,0.2656,0.7344,8.9738,1,0.00273877324927115,TRUE,TRUE,TRUE,"Chi-square test",3
+"Americas_k13","AM6",38,0.0592,0.9408,8.4136,1,0.00372428433587556,TRUE,FALSE,TRUE,"Chi-square test",2
+"Americas_k13","AM7",28,0.0804,0.9196,8.2344,1,0.00411034136776311,TRUE,FALSE,TRUE,"Chi-square test",2
+"Americas_k13","AM8",57,0.943,0.057,0.8545,1,0.355279202916162,FALSE,FALSE,TRUE,"Chi-square test",2
+"Americas_k13","AM9",20,0,1,NA,NA,NA,NA,FALSE,FALSE,"No test - monomorphic",1
+"Americas_k13","AM10",34,0.0809,0.9191,10.5723,1,0.00114795878637666,TRUE,TRUE,TRUE,"Chi-square test",3
+"Americas_k13","AM11",48,0,1,NA,NA,NA,NA,FALSE,FALSE,"No test - monomorphic",1
+"Americas_k13","AM12",3,0,1,NA,NA,NA,NA,FALSE,FALSE,"No test - monomorphic",1
+"Americas_k13","AM13",2,1,0,NA,NA,NA,NA,FALSE,FALSE,"No test - monomorphic",1
+"Infantum_k13","LI1",44,0.0625,0.9375,8.2371,1,0.00410421533612384,TRUE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k13","LI2",70,0.4821,0.5179,255.4147,3,4.41213304494476e-55,TRUE,TRUE,TRUE,"Chi-square test",5
+"Infantum_k13","LI3",16,0.9531,0.0469,0.0655,1,0.797998644750034,FALSE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k13","LI4",25,0.85,0.15,11.8701,1,0.000570424424296385,TRUE,TRUE,TRUE,"Chi-square test",3
+"Infantum_k13","LI5",20,0.9625,0.0375,0.0411,1,0.83941374178844,FALSE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k13","LI6",57,0.0395,0.9605,8.5949,1,0.0033710715648029,TRUE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k13","LI7",9,0.9167,0.0833,0.2254,1,0.634980376249006,FALSE,FALSE,TRUE,"Chi-square test (small sample - interpret cautiously)",2
+"Infantum_k13","LI8",9,0.9167,0.0833,0.2254,1,0.634980376249006,FALSE,FALSE,TRUE,"Chi-square test (small sample - interpret cautiously)",2
+"Infantum_k13","LI9",19,0.3289,0.6711,17.7452,2,0.000140175958133792,TRUE,TRUE,TRUE,"Chi-square test",4
+"Infantum_k13","LI10",46,0.0326,0.9674,5.6147,1,0.0178109099034966,TRUE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k13","LI11",54,0.0417,0.9583,8.5741,1,0.00340985747941753,TRUE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k13","LI12",67,0.8843,0.1157,9.2145,1,0.00240099709704472,TRUE,TRUE,TRUE,"Chi-square test",3
+"Infantum_k13","LI13",13,0.9423,0.0577,0.1017,1,0.74982244157586,FALSE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k8","LI1",22,0.9659,0.0341,0.0337,1,0.854374436909695,FALSE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k8","LI2",20,0.9125,0.0875,4.2148,1,0.0400729233576417,TRUE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k8","LI3",246,0.4106,0.5894,1196.6975,3,3.81708589134927e-259,TRUE,TRUE,TRUE,"Chi-square test",5
+"Infantum_k8","LI4",121,0.0599,0.9401,49.7792,1,1.72055240902844e-12,TRUE,TRUE,TRUE,"Chi-square test",3
+"Infantum_k8","LI5",18,0.9444,0.0556,0.1251,1,0.723561631878446,FALSE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k8","LI6",11,0.9545,0.0455,0.0409,1,0.839666737876233,FALSE,FALSE,TRUE,"Chi-square test",2
+"Infantum_k8","LI7",9,0.9167,0.0833,0.2254,1,0.634980376249006,FALSE,FALSE,TRUE,"Chi-square test (small sample - interpret cautiously)",2
+"Infantum_k8","LI8",13,0.9423,0.0577,0.1017,1,0.74982244157586,FALSE,FALSE,TRUE,"Chi-square test",2

@@ -1,0 +1,26 @@
+{
+    "id": "2DD80652",
+    "path": "~/Documents/Bioinformatics/Leishmania/Leishmania Manuscript/Scripts/Phylogenetic Scripts/20kb Window Phylogeny/20kb_Window_Americas_Only_Phylogenetics_PopAnnotated.R",
+    "project_path": "20kb Window Phylogeny/20kb_Window_Americas_Only_Phylogenetics_PopAnnotated.R",
+    "type": "r_source",
+    "hash": "1916374397",
+    "contents": "",
+    "dirty": false,
+    "created": 1772375998532.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "248,41",
+        "scrollLine": "235"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1772376016,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1772376016874,
+    "read_only": false,
+    "read_only_alternatives": []
+}

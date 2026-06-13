@@ -1,0 +1,245 @@
+sample	population	population_proportion	source_country	source_state_or_region	host_species
+SRR20748484	11	0.99988	Brazil	Rio de Janeiro	Dog
+SRR20748309	6	0.948007	Brazil	Ceara	Dog
+SRR20748298	4	0.99988	Brazil	Mato Grosso do Sul	Human
+SRR20748411	11	0.99988	Brazil	Pernambuco	Human
+SRR20748400	4	0.99988	Brazil	Mato Grosso do Sul	Dog
+SRR20748389	4	0.999869	Brazil	Mato Grosso do Sul	Dog
+SRR20748335	4	0.99988	Brazil	Mato Grosso do Sul	Human
+SRR20748482	4	0.99988	Brazil	Mato Grosso do Sul	Human
+SRR20748471	11	0.999874	Brazil	Espírito Santo	NA
+SRR20748460	11	0.999871	Brazil	Espírito Santo	Human
+SRR20748438	11	0.999873	Brazil	Pará	Human
+SRR20748427	11	0.999856	Brazil	Distrito Federal	Dog
+SRR20748384	11	0.99988	Brazil	Minas Gerais	Human
+SRR20748362	8	0.907194	Brazil	Piauí	Human
+SRR20748323	7	0.99988	Brazil	Piauí	Human
+SRR20748318	6	0.953388	Brazil	Distrito Federal	Human
+SRR20748317	11	0.99988	Brazil	Espírito Santo	Dog
+SRR20748316	3	0.99988	Brazil	Mato Grosso do Sul	Dog
+SRR20748315	10	0.99988	Brazil	Rio Grande do Norte	Human
+SRR20748314	7	0.99988	Brazil	Rio Grande do Norte	Human
+SRR20748313	10	0.99988	Brazil	Rio Grande do Norte	Human
+SRR20748308	8	0.99988	Brazil	Maranhão	Human
+SRR20748307	6	0.965505	Brazil	Sergipe	Human
+SRR20748306	6	0.969587	Brazil	Sergipe	Human
+SRR20748305	10	0.99988	Brazil	Mato Grosso	NA
+SRR20748303	10	0.99988	Brazil	Mato Grosso	Human
+SRR20748302	10	0.99988	Brazil	Mato Grosso	NA
+SRR20748300	11	0.925976	Brazil	Rio Grande do Sul	Dog
+SRR20748296	10	0.99988	Brazil	Mato Grosso	Dog
+SRR20748295	10	0.99988	Brazil	Mato Grosso	NA
+SRR20748294	10	0.99987	Brazil	São Paulo	Dog
+SRR20748293	10	0.99988	Brazil	Rio Grande do Norte	Dog
+SRR20748416	10	0.99988	Brazil	Rio Grande do Norte	Dog
+SRR20748415	10	0.99988	Brazil	Rio Grande do Norte	Dog
+SRR20748414	10	0.999871	Brazil	Rio Grande do Norte	Dog
+SRR20748413	10	0.99988	Brazil	Mato Grosso	NA
+SRR20748410	10	0.99988	Brazil	Rio Grande do Norte	Human
+SRR20748408	10	0.999878	Brazil	Rio Grande do Norte	Human
+SRR20748407	10	0.99988	Brazil	Rio Grande do Norte	Human
+SRR20748406	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748403	10	0.99988	Brazil	São Paulo	Dog
+SRR20748402	3	0.99988	Brazil	São Paulo	Dog
+SRR20748401	8	0.986326	Brazil	Maranhão	NA
+SRR20748399	8	0.981384	Brazil	Maranhão	NA
+SRR20748398	8	0.958168	Brazil	Maranhão	Dog
+SRR20748396	7	0.999871	Brazil	Maranhão	NA
+SRR20748395	8	0.992851	Brazil	Maranhão	NA
+SRR20748392	11	0.939293	Brazil	Rio de Janeiro	Dog
+SRR20748391	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748390	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748388	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748387	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748386	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748352	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748351	9	0.999878	Brazil	Santa Catarina	Dog
+SRR20748350	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748349	3	0.99988	Brazil	Santa Catarina	NA
+SRR20748347	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748345	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748344	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748343	3	0.99988	Brazil	Santa Catarina	Dog
+SRR20748342	9	0.999871	Brazil	Santa Catarina	Dog
+SRR20748341	9	0.99988	Brazil	Santa Catarina	Dog
+SRR20748340	9	0.999879	Brazil	Santa Catarina	Dog
+SRR20748339	11	0.99988	Brazil	Rio de Janeiro	Dog
+SRR20748459	3	0.99988	Brazil	Piauí	NA
+SRR20748458	8	0.99988	Brazil	Piauí	Homo sapiens
+SRR20748455	8	0.908339	Brazil	Piauí	Homo sapiens
+SRR20748443	1	0.999874	Brazil	Minas Gerais	Homo sapiens
+SRR20748442	1	0.99988	Brazil	Minas Gerais	Homo sapiens
+SRR20748441	1	0.99988	Brazil	Piauí	NA
+SRR20748440	1	0.99988	Brazil	Piauí	NA
+SRR20748439	1	0.99988	Brazil	Piauí	NA
+SRR20748437	11	0.99988	Brazil	Piauí	NA
+SRR20748436	6	0.99988	Brazil	Piauí	NA
+SRR20748434	1	0.99988	Brazil	Piauí	NA
+SRR20748433	6	0.999874	Brazil	Piauí	NA
+SRR20748432	6	0.999869	Brazil	Piauí	NA
+SRR20748430	6	0.999878	Brazil	Piauí	NA
+SRR20748429	6	0.999873	Brazil	Piauí	NA
+SRR20748428	11	0.99988	Brazil	Piauí	NA
+SRR20748425	11	0.99988	Brazil	Espírito Santo	NA
+SRR20748424	6	0.925705	Brazil	Piauí	NA
+SRR20748423	6	0.99988	Brazil	Piauí	NA
+SRR20748422	6	0.99988	Brazil	Piauí	NA
+SRR20748421	6	0.999878	Brazil	Piauí	NA
+SRR20748420	1	0.999861	Brazil	Espírito Santo	NA
+SRR20748419	1	0.99988	Brazil	Piauí	NA
+SRR20748417	6	0.99988	Brazil	Piauí	NA
+SRR20748383	1	0.99988	Brazil	Piauí	NA
+SRR20748381	6	0.999872	Brazil	Piauí	Homo sapiens
+SRR20748380	7	0.978472	Brazil	Piauí	Homo sapiens
+SRR20748379	8	0.99988	Brazil	Piauí	Homo sapiens
+SRR20748374	6	0.99988	Brazil	Minas Gerais	Homo sapiens
+SRR20748372	1	0.99988	Brazil	Minas Gerais	Homo sapiens
+SRR20748371	1	0.900804	Brazil	Minas Gerais	Homo sapiens
+SRR20748370	11	0.99988	Brazil	Espírito Santo	Homo sapiens
+SRR20748369	1	0.99988	Brazil	Minas Gerais	Homo sapiens
+SRR20748364	6	0.99988	Brazil	Minas Gerais	Homo sapiens
+SRR20748363	1	0.99988	Brazil	Minas Gerais	Homo sapiens
+SRR20748361	6	0.999879	Brazil	Minas Gerais	Homo sapiens
+SRR20748358	1	0.961687	Brazil	Minas Gerais	Homo sapiens
+SRR20748357	11	0.99988	Brazil	Espírito Santo	Homo sapiens
+SRR20748354	1	0.99988	Brazil	Minas Gerais	Homo sapiens
+SRR20748322	1	0.909297	Brazil	Minas Gerais	Homo sapiens
+SRR20748321	1	0.99988	Brazil	Minas Gerais	Homo sapiens
+SRR20748310	11	0.971629	Paraguay	NA	Dog
+SRR20748450	11	0.99988	Uruguay	NA	NA
+ERR205800	12	0.99988	Brazil	Rio de Janeiro	Human
+SRR7970013	8	0.910622	Brazil	Maranhão	Homo sapiens
+SRR7970015	8	0.921218	Brazil	Maranhão	Homo sapiens
+SRR7970016	8	0.907522	Brazil	Maranhão	Homo sapiens
+SRR7970020	6	0.913427	Brazil	Maranhão	Homo sapiens
+SRR7970024	1	0.987681	Brazil	Minas Gerais	Homo sapiens
+SRR7970026	1	0.984642	Brazil	Minas Gerais	Homo sapiens
+SRR7970027	6	0.953921	Brazil	Piauí	Homo sapiens
+SRR7970028	7	0.99988	Brazil	Piauí	Homo sapiens
+SRR7970029	6	0.99988	Brazil	Minas Gerais	Homo sapiens
+SRR7970030	7	0.99988	Brazil	Piauí	Homo sapiens
+SRR7970031	8	0.99988	Brazil	Piauí	Homo sapiens
+SRR7970034	8	0.944057	Brazil	Piauí	Homo sapiens
+SRR10478767	2	0.99988	Brazil	Maranhão	NA
+SRR10478771	2	0.99988	Brazil	Piauí	NA
+SRR10478772	2	0.99988	Brazil	Maranhão	NA
+SRR10478774	2	0.99988	Brazil	Maranhão	NA
+SRR10478777	2	0.999879	Brazil	Piauí	NA
+SRR10478778	2	0.993057	Brazil	Maranhão	NA
+SRR10478781	2	0.99988	Brazil	Piauí	NA
+SRR10478782	2	0.99988	Brazil	Piauí	NA
+SRR10478783	2	0.999872	Brazil	Maranhão	NA
+SRR10478784	2	0.999876	Brazil	Maranhão	NA
+SRR10478786	2	0.99988	Brazil	Piauí	NA
+SRR10478787	2	0.950664	Brazil	Maranhão	NA
+SRR10478789	2	0.99988	Brazil	Maranhão	NA
+SRR10478792	2	0.999876	Brazil	Maranhão	NA
+SRR10478793	2	0.99988	Brazil	Piauí	NA
+SRR10478795	2	0.999874	Brazil	Piauí	NA
+SRR10478796	2	0.99988	Brazil	Maranhão	NA
+SRR12506670	5	0.99988	Brazil	Mato Grosso	NA
+SRR12506671	11	0.963714	Brazil	Minas Gerais	NA
+SRR12506673	11	0.969921	Brazil	Minas Gerais	NA
+SRR12506678	5	0.99988	Brazil	Mato Grosso	NA
+SRR12506679	4	0.99988	Brazil	Mato Grosso do Sul	NA
+SRR12506681	4	0.999868	Brazil	Mato Grosso do Sul	NA
+SRR12506684	4	0.99988	Brazil	Mato Grosso do Sul	NA
+SRR12506685	4	0.999878	Brazil	Mato Grosso do Sul	Dog
+SRR12506686	4	0.999873	Brazil	Mato Grosso do Sul	Dog
+SRR12506688	4	0.99988	Brazil	Mato Grosso do Sul	Dog
+SRR12506689	4	0.99988	Brazil	Mato Grosso do Sul	NA
+SRR12506692	5	0.99988	Brazil	Mato Grosso	NA
+SRR12506693	5	0.99988	Brazil	Mato Grosso	NA
+SRR12506694	11	0.99988	Brazil	Espírito Santo	NA
+SRR12506695	5	0.99988	Brazil	Mato Grosso	NA
+SRR12506696	5	0.99988	Brazil	Mato Grosso	NA
+SRR12506697	3	0.99988	Brazil	São Paulo	NA
+SRR12506698	11	0.927886	Brazil	São Paulo	NA
+SRR12506701	10	0.99988	Brazil	Rio Grande do Norte	NA
+SRR12506702	10	0.99988	Brazil	Rio Grande do Norte	NA
+SRR12506703	10	0.99988	Brazil	Rio Grande do Norte	NA
+SRR12506705	11	0.999872	Brazil	Espírito Santo	Human
+SRR12506706	10	0.99988	Brazil	Rio Grande do Norte	NA
+SRR12506707	10	0.99988	Brazil	Rio Grande do Norte	NA
+SRR12506708	10	0.99988	Brazil	Rio Grande do Norte	NA
+SRR12506709	10	0.999875	Brazil	Rio Grande do Norte	NA
+SRR12506710	10	0.999878	Brazil	Rio Grande do Norte	NA
+SRR12506711	10	0.99988	Brazil	Rio Grande do Norte	NA
+SRR12506716	11	0.99988	Brazil	Espírito Santo	NA
+SRR12506718	5	0.99988	Brazil	Mato Grosso	NA
+SRR12506719	5	0.99988	Brazil	Mato Grosso	NA
+SRR12506720	5	0.99988	Brazil	Mato Grosso	NA
+SRR12506721	5	0.999869	Brazil	Mato Grosso	NA
+SRR12506722	5	0.99988	Brazil	Mato Grosso	Dog
+SRR12506723	5	0.999876	Brazil	Mato Grosso	NA
+SRR12506724	5	0.99988	Brazil	Mato Grosso	NA
+SRR12506726	5	0.999872	Brazil	Mato Grosso	Dog
+SRR13744648	2	0.950664	Brazil	Maranhão	Homo sapiens
+SRR13744626	2	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744604	2	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744593	2	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744679	2	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744678	2	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744677	2	0.999875	Brazil	Piauí	Homo sapiens
+SRR13744676	2	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744675	2	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744674	2	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744672	2	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744671	2	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744669	2	0.960107	Brazil	Piauí	Homo sapiens
+SRR13744668	2	0.999876	Brazil	Maranhão	NA
+SRR13744667	2	0.999872	Brazil	Maranhão	Homo sapiens
+SRR13744666	2	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744665	2	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744662	2	0.993057	Brazil	Maranhão	Homo sapiens
+SRR13744661	2	0.999879	Brazil	Piauí	Homo sapiens
+SRR13744660	2	0.999875	Brazil	Piauí	Homo sapiens
+SRR13744657	2	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744656	2	0.967029	Brazil	Maranhão	Homo sapiens
+SRR13744654	2	0.948459	Brazil	Piauí	Homo sapiens
+SRR13744653	2	0.99988	Brazil	Piauí	NA
+SRR13744652	2	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744650	2	0.987612	Brazil	Piauí	Homo sapiens
+SRR13744649	2	0.937925	Brazil	Maranhão	Homo sapiens
+SRR13744647	2	0.999879	Brazil	Piauí	Homo sapiens
+SRR13744645	2	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744682	7	0.967589	Brazil	Piauí	Dog
+SRR13744681	8	0.99988	Brazil	Piauí	Dog
+SRR13744638	8	0.999858	Brazil	Piauí	Homo sapiens
+SRR13744636	8	0.999866	Brazil	Piauí	Homo sapiens
+SRR13744635	8	0.999872	Brazil	Maranhão	Homo sapiens
+SRR13744634	8	0.938623	Brazil	Piauí	Homo sapiens
+SRR13744633	8	0.906676	Brazil	Piauí	Homo sapiens
+SRR13744632	8	0.999873	Brazil	Piauí	Homo sapiens
+SRR13744630	8	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744629	8	0.999879	Brazil	Maranhão	Homo sapiens
+SRR13744628	7	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744625	7	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744619	6	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744618	7	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744617	8	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744612	8	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744610	8	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744608	8	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744607	8	0.99988	Brazil	Piauí	Homo sapiens
+SRR13744605	8	0.999856	Brazil	Pará	Homo sapiens
+SRR13744603	6	0.99988	Brazil	Maranhão	Homo sapiens
+SRR13744599	8	0.99988	Brazil	Piauí	Dog
+SRR13744597	8	0.91632	Brazil	Piauí	Dog
+SRR13744596	8	0.970418	Brazil	Piauí	Dog
+SRR13744594	3	0.902039	Brazil	Piauí	Dog
+SRR16972343	8	0.999293	Brazil	Piauí	Homo sapiens
+SRR16972341	3	0.912545	Brazil	Piauí	Homo sapiens
+SRR16972339	8	0.941053	Brazil	Piauí	Homo sapiens
+SRR16972338	8	0.99988	Brazil	Maranhão	Homo sapiens
+SRR16972311	3	0.932664	Brazil	Maranhão	NA
+SRR16972314	8	0.942357	Brazil	Maranhão	NA
+SRR16972316	8	0.91925	Brazil	Maranhão	NA
+SRR16972319	8	0.901984	Brazil	Maranhão	NA
+SRR16972321	8	0.919236	Brazil	Maranhão	NA
+SRR16972322	8	0.99988	Brazil	Maranhão	NA
+SRR16972324	11	0.99988	Brazil	Maranhão	NA
+ERR205763	12	0.99987	Honduras	NA	NA
+ERR205788	12	0.99988	Honduras	NA	NA
+SRR8608748	13	0.999875	Honduras	NA	NA
+ERR205787	13	0.99988	Panama	NA	NA

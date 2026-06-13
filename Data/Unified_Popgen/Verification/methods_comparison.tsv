@@ -1,0 +1,11 @@
+Step	VCFtools_approach	Pegas_approach
+Input VCF	Diploidised chr31 VCF — same file	Diploidised chr31 VCF — same file
+Sample subsetting	Pre-subsetted: VCF was filtered to V2 MSL0 samples BEFORE running Tajima's D (using --keep or bcftools view with a sample list). Monomorphic sites in subset were removed at VCF level.	Computational: full VCF loaded (930 pseudo-diploid samples), then rows subset to V2 MSL0 .1 and .2 haplotypes after loading into R.
+Sample identification	Used a sample list file (V2.min_proportion0.9_MSL0_samples.diploidised.tsv or equivalent) produced by Dan's pipeline.	Uses ADMIXTURE membership TSV (population == 'AM2') + metadata MSL_coverage_rounded == 0, then appends .1 and .2 suffixes.
+Site filtering	All VCF-level filters applied during subsetting (e.g., sites monomorphic in V2 MSL0 removed, any quality/coverage filters from the subsetting command).	Only filters: p == 0 (all ref in V2 MSL0) or p == 1 (all alt in V2 MSL0) per SNP. No VCF-level quality filters re-applied.
+n (gene copies)	n = 2 × n_samples (standard diploid VCFtools treatment). For 46 pseudo-diploid V2 MSL0 samples: n = 92.	n_gene = n_rows × PLOIDY = 46 × 2 = 92. Should match VCFtools.
+Allele frequency	p = n_alt_alleles / (2 × n_non_missing_samples) per SNP.	p = mean(dosage) / PLOIDY = mean(dosage) / 2 per SNP. Mathematically equivalent IF dosage correctly counts alt alleles.
+Window coordinates	Non-overlapping 50kb: BIN_START = 0, 50000, 100000, ...	Non-overlapping 50kb: seq(0, chr31_max, by=50000). Should match VCFtools.
+S (segregating sites)	N_SNPS in output = number of polymorphic sites in the pre-subsetted VCF within each window.	S computed inside function: count of SNPs where 0 < p < 1 within V2 MSL0 rows.
+Tajima's D formula	Standard Tajima (1989) implementation in VCFtools source code.	Custom R implementation using same Tajima (1989) formula: D = (k - S/a1) / sqrt(e1*S + e2*S*(S-1)).
+Known discrepancy source	—	S counts differ per window (S_diff ranges from -3 to +10 across 24 windows), suggesting different sites pass the monomorphic filter in each approach.

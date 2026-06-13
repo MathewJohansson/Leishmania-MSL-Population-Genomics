@@ -1,0 +1,188 @@
+COVERAGE VERIFICATION ANALYSIS LOG
+====================================
+Manuscript: Evolutionary Forces Shaping the MSL Deletion in Brazilian L. infantum
+Analyst: Mathew Johansson
+Location: /mnt/scratch/projects/biol-leish-2019/PROJECTS/2025-LINFANTUM-POPGEN/
+Date: 25/03/26
+
+
+
+OVERVIEW
+--------
+Goal: Verify that the partial MSL deletion in the Turkish strain ERR3550134 (coverage_rounded=3,
+MSL=1110) is in the correct genomic position on chr31. Produce a supplementary figure showing
+read coverage across the MSL locus for 2 MSL- (complete deletion), 2 MSL+ (wild-type), and
+1 MSL3 (partial deletion) sample, confirming the deletion is exactly where expected.
+
+Tool: samtools bedcov
+Method: Calculate read depth in 100nt windows across the MSL locus region on chr31.
+
+
+
+MSL LOCUS COORDINATES (from MSL-genes-only.bed)
+-------------------------------------------------
+LinJ.31  1,181,282 – 1,192,406
+
+Genes:
+  LINF_310031200:  LinJ.31  1,181,282 – 1,182,328
+  LINF_310031300:  LinJ.31  1,184,205 – 1,185,341
+  LINF_310031400:  LinJ.31  1,185,827 – 1,188,553
+  LINF_310031500:  LinJ.31  1,191,357 – 1,192,406
+
+
+
+SAMPLES
+-------
+Partial deletion (MSL3, 1110) — the novel finding:
+  ERR3550134  EP50  Turkiye  MCAN  coverage_rounded=3
+
+MSL- controls (complete deletion, 0000):
+  SRR20748483  C17.206  Brazil (Ceará)  MCAN  coverage_rounded=0
+  SRR20748320  CCC-17.481  Brazil (Ceará)  MCAN  coverage_rounded=0
+
+MSL+ controls (wild-type, 1111):
+  SRR10478771  P2008  Brazil (Piauí)  MHOM  coverage_rounded=4
+  SRR10478777  P3171  Brazil (Piauí)  MHOM  coverage_rounded=4
+
+All BAMs confirmed at:
+  /mnt/scratch/projects/biol-leish-2019/PROJECTS/2025-LINFANTUM-POPGEN/bams/{sample}.sort_no_dup.bam
+
+
+
+BASH COMMANDS
+-------------
+All run in: /mnt/scratch/projects/biol-leish-2019/PROJECTS/2025-LINFANTUM-POPGEN/
+
+# Identify partial deletion sample
+grep "1110\|Turkey\|Turk" vcf_samples29_location_and_MSL_data_2025-06-19_corrected.tsv
+
+# Select control samples
+grep -v "^sra" vcf_samples29_location_and_MSL_data_2025-06-19_corrected.tsv | awk '$15 == 0' | head -3
+grep -v "^sra" vcf_samples29_location_and_MSL_data_2025-06-19_corrected.tsv | awk '$15 == 4' | head -3
+
+# Confirm all BAMs present
+for s in SRR20748483 SRR20748320 SRR10478771 SRR10478777 ERR3550134; do
+    echo -n "$s: "
+    ls bams/${s}.sort_no_dup.bam 2>/dev/null || echo "NOT FOUND"
+done
+
+# Create 100nt windows across MSL locus
+python3 -c "
+start, end, chrom = 1181282, 1192406, 'LinJ.31'
+for i in range(start, end, 100):
+    print(f'{chrom}\t{i}\t{min(i+100, end)}')
+" > MSL_locus_100nt_windows.bed
+# Result: 112 windows
+
+# Run samtools bedcov for all five samples
+module load SAMtools
+for s in SRR20748483 SRR20748320 SRR10478771 SRR10478777 ERR3550134; do
+    samtools bedcov MSL_locus_100nt_windows.bed bams/${s}.sort_no_dup.bam > coverage_${s}.txt
+    echo "$s done"
+done
+# Output files: coverage_{sample}.txt
+# Format: CHROM | BIN_START | BIN_END | TOTAL_BASES_COVERED
+# NOTE: Values are total bases covered per window, NOT per-base depth.
+#       Divide by window size (100) in R to get mean depth per base.
+
+
+
+BEDCOV RESULTS (raw)
+--------------------
+Format: CHROM | BIN_START | BIN_END | TOTAL_BASES_COVERED (divide by 100 for mean depth)
+
+ERR3550134 (MSL3, 1110) — first and last 5 windows:
+  LinJ.31  1181282  1181382  4601
+  LinJ.31  1181382  1181482  5328
+  LinJ.31  1181482  1181582  5798
+  LinJ.31  1181582  1181682  5061
+  LinJ.31  1181682  1181782  5879
+  ...
+  LinJ.31  1191582  1191682  1520
+  LinJ.31  1191682  1191782  919
+  LinJ.31  1191782  1191882  351
+  LinJ.31  1191882  1191982  738
+  LinJ.31  1191982  1192082  2008
+  LinJ.31  1192082  1192182  3464
+  LinJ.31  1192182  1192282  4448
+  LinJ.31  1192282  1192382  4706
+  LinJ.31  1192382  1192406  1151
+
+SRR20748483 (MSL0, 0000) — first 5 windows:
+  LinJ.31  1181282  1181382  0
+  LinJ.31  1181382  1181482  0
+  LinJ.31  1181482  1181582  0
+  LinJ.31  1181582  1181682  0
+  LinJ.31  1181682  1181782  0
+
+SRR10478771 (MSL4, 1111) — first 5 windows:
+  LinJ.31  1181282  1181382  12082
+  LinJ.31  1181382  1181482  12617
+  LinJ.31  1181482  1181582  11506
+  LinJ.31  1181582  1181682  12196
+  LinJ.31  1181682  1181782  13911
+
+OBSERVATIONS:
+  - MSL0 samples (SRR20748483, SRR20748320): coverage = 0 throughout — complete
+    deletion of all four MSL genes confirmed.
+  - MSL4 samples (SRR10478771, SRR10478777): high, consistent coverage (~12,000
+    total bases per 100nt window, ~120x mean depth) across the whole locus.
+  - MSL3/1110 (ERR3550134): coverage ~4,000-7,000 across most of the locus but
+    drops sharply around positions 1,190,682-1,191,982, with minimum of 351 total
+    bases at 1,191,782-1,191,882 (~3.5x mean depth vs ~50x elsewhere).
+  - The drop region overlaps with LINF_310031500 (1,191,357-1,192,406) — the last
+    MSL gene. This is consistent with a 1110 pattern where the fourth gene copy
+    is deleted or at reduced copy number.
+  - Full visualisation needed to confirm exact boundaries — to be done in R.
+
+NEXT STEPS:
+  [ ] Download coverage files to local machine.
+  [ ] Write R visualisation script.
+  [ ] Divide bedcov values by 100 to get mean per-base depth for each window.
+  [ ] Plot coverage across MSL locus for all 5 samples.
+  [ ] Confirm which gene(s) show reduced coverage in ERR3550134.
+
+
+
+
+VISUALISATION
+-------------
+Script: Turkish_Strain_Coverage_Verification.R
+Local data dir: /home/johansson/Documents/Bioinformatics/Leishmania/Leishmania Manuscript/Turkish Strain Coverage Verification/
+Output figures: Figures/Turkish Strain Coverage Verification/
+
+Files downloaded from Viking via scp:
+  coverage_ERR3550134.txt, coverage_SRR20748483.txt, coverage_SRR20748320.txt,
+  coverage_SRR10478771.txt, coverage_SRR10478777.txt
+
+Figure design:
+  - Single plot, all 5 samples as lines
+  - MSL0 controls: #BB5566 (solid), #CC0000 (dashed)
+  - MSL4 controls: #004488 (solid), #0077BB (dashed)
+  - ERR3550134 (MSL3/1110): #228833 (green, solid)
+  - Raw lines: transparent (alpha 0.3); loess smoother prominent on top (span=0.15)
+  - MSL gene positions shaded grey; gene labels shown (Gene 1-4 with LINF IDs)
+  - bedcov values divided by 100 to give mean per-base depth
+
+Figures produced:
+  turkish_strain_MSL_coverage.jpeg / .pdf
+
+KEY FINDINGS:
+  - MSL0 controls (SRR20748483, SRR20748320): coverage = 0 throughout all four
+    MSL genes — complete deletion of the locus confirmed.
+  - MSL4 controls (SRR10478771, SRR10478777): consistent high coverage (~100-120x)
+    across all four genes — wild-type confirmed.
+  - ERR3550134 (MSL3/1110, Türkiye): coverage ~40-50x across Genes 1-3
+    (LINF_310031200, LINF_310031300, LINF_310031400), dropping sharply at Gene 4
+    (LINF_310031500, 1,191,357-1,192,406) to ~15x minimum.
+  - The drop at Gene 4 does not reach zero, consistent with a tetraploid organism
+    retaining some gene copies (1110 = one copy deleted, three retained).
+  - This confirms the partial deletion in ERR3550134 is localised to LINF_310031500,
+    exactly where expected for the 1110 pattern.
+  - Novel finding: partial MSL deletion (1110) in a Mediterranean/Turkish strain,
+    not previously described. All complete deletions (0000) are restricted to the
+    Americas.
+
+
+
+

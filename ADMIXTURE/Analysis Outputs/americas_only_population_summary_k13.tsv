@@ -1,0 +1,14 @@
+population	N_Samples	Countries_Represented	Regions_Represented	Host_Species	Notes
+AM1	19	Brazil	Espírito Santo, Minas Gerais, Piauí	Human	
+AM10	26	Brazil	Mato Grosso, Rio Grande do Norte, São Paulo	Dog, Human	
+AM11	25	Brazil, Paraguay, Uruguay	Distrito Federal, Espírito Santo, Maranhão, Minas Gerais, Pará, Pernambuco, Piauí, Rio de Janeiro, Rio Grande do Sul, São Paulo	Dog, Human	
+AM12	3	Brazil, Honduras	Rio de Janeiro	Human	
+AM13	2	Honduras, Panama			
+AM2	46	Brazil	Maranhão, Piauí	Human	
+AM3	9	Brazil	Maranhão, Mato Grosso do Sul, Piauí, Santa Catarina, São Paulo	Dog, Human	
+AM4	12	Brazil	Mato Grosso do Sul	Dog, Human	
+AM5	14	Brazil	Mato Grosso	Dog	
+AM6	23	Brazil	Ceara, Distrito Federal, Maranhão, Minas Gerais, Piauí, Sergipe	Dog, Human	
+AM7	10	Brazil	Maranhão, Piauí, Rio Grande do Norte	Dog, Human	
+AM8	40	Brazil	Maranhão, Pará, Piauí	Dog, Human	
+AM9	15	Brazil	Santa Catarina	Dog	
