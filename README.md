@@ -100,7 +100,7 @@ Spatial analysis of MSL copy number variation and sample distribution across glo
 
 ![MSL Coverage by State](Figures/Geographical%20Work/brazil_coverage_map.jpg)
 
-**Figure 1:** Geographic distribution of MSL copy number variation across Brazilian states. Pie charts show the proportion of samples with 0 (red), 1 (orange), 2 (light yellow), 3 (light teal), or 4 (dark blue) MSL gene copies per location. Circle size indicates sample size (legend: 1, 2, 5, 10 samples). MSL deletions (0 copies, red) are concentrated in southeastern and northeastern Brazilian states, particularly São Paulo and Bahia, whilst northern and southern regions show higher frequency of intact MSL (blue, 4 copies). This geographic clustering suggests regional epidemiological patterns and potential selection or founder effects driving MSL resistance spread in Brazil.
+**Figure 1:** *Geographic distribution of MSL copy number variation across Brazilian states. Pie charts show the proportion of samples with 0 (red), 1 (orange), 2 (light yellow), 3 (light teal), or 4 (dark blue) MSL gene copies per location. Circle size indicates sample size (legend: 1, 2, 5, 10 samples). MSL deletions (0 copies, red) are concentrated in southeastern and northeastern Brazilian states, particularly São Paulo and Bahia, whilst northern and southern regions show higher frequency of intact MSL (blue, 4 copies). This geographic clustering suggests regional epidemiological patterns and potential selection or founder effects driving MSL resistance spread in Brazil.*
 
 **Status:** ✅ Complete
 
