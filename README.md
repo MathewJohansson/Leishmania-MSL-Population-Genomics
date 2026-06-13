@@ -113,15 +113,51 @@ MSL deletions confer resistance to **miltefosine**, the only oral treatment for 
 
 ## Methods Summary
 
-**Population Structure (ADMIXTURE):** - ADMIXTURE v1.3 with K=1-20 tested on pruned SNP matrices. - Cross-validation error minimisation for optimal K selection. - High-confidence assignments: ≥90% ancestry threshold for population membership.
+**Population Structure (ADMIXTURE):**
 
-**Phylogenetics:** - Nei genetic distances computed from biallelic SNP genotypes (ape package, R). - Neighbour-Joining trees constructed with `ape::nj()` and rooted where applicable. - Visualisation with `ggtree` (R) including multiple annotation layers: MSL status, population, geographic region, host species, ploidy. - Distance matrices and Newick-format tree files retained for reproducibility.
+\- ADMIXTURE v1.3 with K=1-20 tested on pruned SNP matrices.
 
-**Population Genetics:** - π: windowed nucleotide diversity per population (50kb windows, 5kb step) via VCFtools. - Tajima's D: standardised measure of nucleotide diversity, computed in 50kb windows with 5kb step. - Fst: pairwise population differentiation (stampp package, R) and sliding-window Fst on chr31 via VCFtools. - Dxy: nucleotide divergence between MSL0 and MSL4 populations (pegas package, R) and unified framework (custom R scripts).
+\- Cross-validation error minimisation for optimal K selection.
 
-**Hardy-Weinberg Equilibrium:** - Comprehensive HWE: Chi-square test on diploidised genotypes for each population. - Windowed HWE: Chi-square test on 50kb windows of chromosome 31 with 5kb step. - Threshold for ≥90% population membership; separate ploidy models for SNP and tetraploid data.
+\- High-confidence assignments: ≥90% ancestry threshold for population membership.
 
-**Data:** - 463 *L. infantum* isolates, global sampling. - Whole-genome sequencing (VCF format, biallelic SNPs). - Geographic metadata, host species, MSL copy number (coverage-based). - Ploidy stratification: diploid (whole-genome) and tetraploid (chr31) calls.
+**Phylogenetics:**
+
+\- Nei genetic distances computed from biallelic SNP genotypes (ape package, R).
+
+\- Neighbour-Joining trees constructed with `ape::nj()` and rooted where applicable.
+
+\- Visualisation with `ggtree` (R) including multiple annotation layers: MSL status, population, geographic region, host species, ploidy.
+
+\- Distance matrices and Newick-format tree files retained for reproducibility.
+
+**Population Genetics:**
+
+\- π: windowed nucleotide diversity per population (50kb windows, 5kb step) via VCFtools.
+
+\- Tajima's D: standardised measure of nucleotide diversity, computed in 50kb windows with 5kb step.
+
+\- Fst: pairwise population differentiation (stampp package, R) and sliding-window Fst on chr31 via VCFtools.
+
+\- Dxy: nucleotide divergence between MSL0 and MSL4 populations (pegas package, R) and unified framework (custom R scripts).
+
+**Hardy-Weinberg Equilibrium:**
+
+\- Comprehensive HWE: Chi-square test on diploidised genotypes for each population.
+
+\- Windowed HWE: Chi-square test on 50kb windows of chromosome 31 with 5kb step.
+
+\- Threshold for ≥90% population membership; separate ploidy models for SNP and tetraploid data.
+
+**Data:**
+
+\- 463 *L. infantum* isolates, global sampling.
+
+\- Whole-genome sequencing (VCF format, biallelic SNPs).
+
+\- Geographic metadata, host species, MSL copy number (coverage-based).
+
+\- Ploidy stratification: diploid (whole-genome) and tetraploid (chr31) calls.
 
 ------------------------------------------------------------------------
 
@@ -179,43 +215,29 @@ MSL deletions confer resistance to **miltefosine**, the only oral treatment for 
 
 ## Software & Computational Tools
 
-**R (v4.4.2) & Packages:** - Data manipulation: tidyverse (Wickham et al. 2019), data.table (Dowle & Srinivasan 2021) - Phylogenetics: ape (Paradis & Schliep 2019), ggtree (Yu et al. 2017), treeio (Wang et al. 2020), phytools (Revell 2012) - Population genetics: pegas (Paradis 2010), stampp (Pembleton et al. 2013), adegenet (Jombart 2008) - Visualisation: ggplot2 (Wickham 2016), RColorBrewer (Neuwirth 2022), ggtext (Wilke & Wiernik 2022)
+**R (v4.4.2) & Packages:**
 
-**External Tools:** - ADMIXTURE v1.3 (Alexander et al. 2009) — Bayesian population structure inference - VCFtools (Danecek et al. 2011) — VCF processing, filtering, population genetics statistics - SplitsTree (Huson & Bryant 2006) — NeighborNet and phylogenetic network visualisation
+\- Data manipulation: tidyverse (Wickham et al. 2019), data.table (Dowle & Srinivasan 2021)
 
-**Custom Utilities:** - `vcf2phylip` — VCF to PHYLIP/NEXUS format conversion - `diploidise_tetraploid_vcf_v2.pl` — Conversion of tetraploid to pseudodiploid genotypes for SNP-based analyses
+\- Phylogenetics: ape (Paradis & Schliep 2019), ggtree (Yu et al. 2017), treeio (Wang et al. 2020), phytools (Revell 2012)
 
-------------------------------------------------------------------------
+\- Population genetics: pegas (Paradis 2010), stampp (Pembleton et al. 2013), adegenet (Jombart 2008)
 
-## References for Tools
+\- Visualisation: ggplot2 (Wickham 2016), RColorBrewer (Neuwirth 2022), ggtext (Wilke & Wiernik 2022)
 
-Alexander, D.H., Novembre, J. & Lange, K. (2009). Fast model-based estimation of ancestry in unrelated individuals. *Genome Research*, 19(9), 1655–1664.
+**External Tools:**
 
-Danecek, P., Auton, A., Abecasis, G., et al. (2011). The variant call format and VCFtools. *Bioinformatics*, 27(15), 2156–2158.
+\- ADMIXTURE v1.3 (Alexander et al. 2009) — Bayesian population structure inference
 
-Dowle, M. & Srinivasan, A. (2021). *data.table: Extension of data.frame*. R package version 1.14.2.
+\- VCFtools (Danecek et al. 2011) — VCF processing, filtering, population genetics statistics
 
-Huson, D.H. & Bryant, D. (2006). Application of phylogenetic networks in evolutionary studies. *Molecular Biology and Evolution*, 23(2), 254–267.
+\- SplitsTree (Huson & Bryant 2006) — NeighborNet and phylogenetic network visualisation
 
-Jombart, T. (2008). adegenet: a R package for the multivariate analysis of genetic markers. *Bioinformatics*, 24(11), 1403–1405.
+**Custom Utilities:**
 
-Neuwirth, E. (2022). *RColorBrewer: ColorBrewer Palettes*. R package version 1.1-3.
+\- `vcf2phylip` — VCF to PHYLIP/NEXUS format conversion
 
-Paradis, E. (2010). pegas: an R package for population genetics with an integrated-modular environment. *Bioinformatics*, 26(3), 419–420.
-
-Paradis, E. & Schliep, K. (2019). ape 5.0: an environment for modern phylogenetics and evolutionary analyses in R. *Bioinformatics*, 35(3), 526–528.
-
-Pembleton, L.W., Cogan, N.O.I. & Forster, J.W. (2013). StAMPP: an R package for calculation of genetic differentiation and structure of mixed-ploidy level populations. *Molecular Ecology Resources*, 13(5), 946–952.
-
-Revell, L.J. (2012). phytools: an R package for phylogenetic comparative biology (and other things). *Methods in Ecology and Evolution*, 3(2), 217–223.
-
-Wang, L.G., Lam, T.T.Y., Xu, S., Dai, Z., Zhou, L., Feng, T., et al. (2020). treeio: an R package for phylogenetic tree input and output with richly annotated and associated data. *Molecular Biology and Evolution*, 37(2), 599–603.
-
-Wickham, H. (2016). *ggplot2: Elegant Graphics for Data Analysis* (2nd ed.). Springer.
-
-Wickham, H., Francois, R., Henry, L. & Müller, K. (2019). *dplyr: A Grammar of Data Manipulation*. R package version 0.8.3.
-
-Wilke, C.O. & Wiernik, B.M. (2022). *ggtext: Improved Text Rendering Support for "ggplot2"*. R package version 0.1.1.
+\- `diploidise_tetraploid_vcf_v2.pl` — Conversion of tetraploid to pseudodiploid genotypes for SNP-based analyses
 
 ------------------------------------------------------------------------
 
@@ -229,11 +251,31 @@ MSL copy number inferred from read depth mapping to reference genome.
 
 ## Project Status
 
-**Completed:** - ✅ ADMIXTURE population structure (three complementary datasets: species-level, species-only, Americas-only) - ✅ Multi-scale phylogenetic analysis (Neighbour-Joining trees at whole-genome, chr31, 100kb, 20kb scales) - ✅ Ploidy stratification (diploid and tetraploid analyses) - ✅ Hardy-Weinberg equilibrium testing (comprehensive + windowed on chr31) - ✅ Population diversity statistics (π, Tajima's D, Fst, Dxy) - ✅ Geographic distribution and MSL coverage analysis - ✅ MSL copy number verification in non-Americas strains
+**Completed:**
 
-**Pending Final Validation:** - ⏳ Unified population statistics framework (awaiting final VCF QC from supervisor)
+\- ✅ ADMIXTURE population structure (three complementary datasets: species-level, species-only, Americas-only)
 
-**Broader Context:** - 🔄 Manuscript preparation (collaborative, multi-author, in active development) - 🔄 Integration of HWE and geographic collaborator results (Zeynep Sakaoglu)
+\- ✅ Multi-scale phylogenetic analysis (Neighbour-Joining trees at whole-genome, chr31, 100kb, 20kb scales)
+
+\- ✅ Ploidy stratification (diploid and tetraploid analyses)
+
+\- ✅ Hardy-Weinberg equilibrium testing (comprehensive + windowed on chr31)
+
+\- ✅ Population diversity statistics (π, Tajima's D, Fst, Dxy)
+
+\- ✅ Geographic distribution and MSL coverage analysis
+
+\- ✅ MSL copy number verification in non-Americas strains
+
+**Pending Final Validation:**
+
+\- ⏳ Unified population statistics framework (awaiting final VCF QC from supervisor)
+
+**Broader Context:**
+
+\- 🔄 Manuscript preparation (this is in active development, being prepared by myself, with assistance from Dr Daniel Jeffares
+
+\- 🔄 Integration of HWE and geographic collaborator results (Zeynep Sakaoglu)
 
 ------------------------------------------------------------------------
 
@@ -260,20 +302,38 @@ GitHub: [\@MathewJohansson](https://github.com/MathewJohansson)
 
 ------------------------------------------------------------------------
 
-## Key References
+## References
 
-**ADMIXTURE:**\
 Alexander, D.H., Novembre, J. & Lange, K. (2009). Fast model-based estimation of ancestry in unrelated individuals. *Genome Research*, 19(9), 1655–1664.
 
-**Phylogenetics & Distance-Based Methods:**\
-Saitou, N. & Nei, M. (1987). The Neighbour-joining method: a new method for reconstructing phylogenetic trees. *Molecular Biology and Evolution*, 4(4), 406–425.
-
-**Population Genetics (VCFtools):**\
 Danecek, P., Auton, A., Abecasis, G., et al. (2011). The variant call format and VCFtools. *Bioinformatics*, 27(15), 2156–2158.
 
-**Visualisation (ggplot2, ggtree):**\
+Dowle, M. & Srinivasan, A. (2021). *data.table: Extension of data.frame*. R package version 1.14.2.
+
+Huson, D.H. & Bryant, D. (2006). Application of phylogenetic networks in evolutionary studies. *Molecular Biology and Evolution*, 23(2), 254–267.
+
+Jombart, T. (2008). adegenet: a R package for the multivariate analysis of genetic markers. *Bioinformatics*, 24(11), 1403–1405.
+
+Neuwirth, E. (2022). *RColorBrewer: ColorBrewer Palettes*. R package version 1.1-3.
+
+Paradis, E. (2010). pegas: an R package for population genetics with an integrated-modular environment. *Bioinformatics*, 26(3), 419–420.
+
+Paradis, E. & Schliep, K. (2019). ape 5.0: an environment for modern phylogenetics and evolutionary analyses in R. *Bioinformatics*, 35(3), 526–528.
+
+Pembleton, L.W., Cogan, N.O.I. & Forster, J.W. (2013). StAMPP: an R package for calculation of genetic differentiation and structure of mixed-ploidy level populations. *Molecular Ecology Resources*, 13(5), 946–952.
+
+Revell, L.J. (2012). phytools: an R package for phylogenetic comparative biology (and other things). *Methods in Ecology and Evolution*, 3(2), 217–223.
+
+Saitou, N. & Nei, M. (1987). The Neighbour-joining method: a new method for reconstructing phylogenetic trees. *Molecular Biology and Evolution*, 4(4), 406–425.
+
+Wang, L.G., Lam, T.T.Y., Xu, S., Dai, Z., Zhou, L., Feng, T., et al. (2020). treeio: an R package for phylogenetic tree input and output with richly annotated and associated data. *Molecular Biology and Evolution*, 37(2), 599–603.
+
 Wickham, H. (2016). *ggplot2: Elegant Graphics for Data Analysis* (2nd ed.). Springer.\
 Yu, G., Smith, D.K., Zhu, H., Zhao, Y. & Guan, Y. (2017). ggtree: an R package for visualization and annotation of phylogenetic trees with their covariates and other associated data. *Methods in Ecology and Evolution*, 8(1), 28–36.
+
+Wickham, H., Francois, R., Henry, L. & Müller, K. (2019). *dplyr: A Grammar of Data Manipulation*. R package version 0.8.3.
+
+Wilke, C.O. & Wiernik, B.M. (2022). *ggtext: Improved Text Rendering Support for "ggplot2"*. R package version 0.1.1.
 
 ------------------------------------------------------------------------
 
